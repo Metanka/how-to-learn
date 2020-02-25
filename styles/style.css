@@ -31,16 +31,19 @@
   margin: auto;
 }
 
-.logo_place_header {
+.logo {
   width: 183px;
   height: 32px;
-  background-image: url(../images/logo.svg);
+  display: flex;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
+}
+
+.logo_place_header {
+  background-image: url(../images/logo.svg);
   top: 30px;
   left: 64px;
-  display: flex;
   z-index: 5;
 }
 
@@ -62,9 +65,6 @@
   bottom: 30px;
   display: flex;
   z-index: 5;
-}
-
-.header__subtitle_text {
   font-size: 18px;
   line-height: 25px;
   font-weight: 300;
@@ -72,16 +72,22 @@
   margin: 0;
 }
 
-.header__subtitle_link {
+
+.header__link {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   color: #2F80ED;
 }
 
-.header__subtitle_link:hover {
+.header__link:hover {
   color: black;
 }
 
-.header__main_illustration {
+.header__main-illustration {
   width: 765px;
   height: 608px;
   position: absolute;
@@ -101,17 +107,17 @@
   z-index: 1;
 }
 
-.two_columns {
+.two-columns {
   width: 80%;
   padding: 0;
   display: flex;
-  min-width: 784px;
   margin: auto;
   margin-bottom: 100px;
+  justify-content: space-between;
 }
 
-.two_columns__brief {
-  min-width: 175px;
+.two-columns__brief {
+  width: 175px;
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -120,19 +126,20 @@
   color: #2F80ED;
 }
 
-.two_columns__main-text {
-  
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
 }
-.two_columns__pharagraph {
+.two-columns__pharagraph {
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
 }
 
-.two_columns__spun_accent {
+.two-columns__span-accent {
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -199,7 +206,10 @@
   z-index: 0;
   position: relative;
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
+  background-image: url(../images/feinman.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
 }
 
 .feinman__title {
@@ -240,15 +250,6 @@
   color: #2F80ED;
 }
 
-.feinman__image {
-  position: absolute;
-  width: 867px;
-  height: 637px;
-  z-index: -2;
-  left: 0;
-  bottom: 0;
-}
-
 .kaufman {
   background-color: #1F1F1F;
   z-index: -5;
@@ -282,8 +283,6 @@
 .table__cell_theme_dark {
     width: 200px;
     color: white;
-    margin-right: 0;
-    margin-top: 80px;
 }
 
 .footer {
@@ -312,7 +311,6 @@
 
 .logo_place_footer {
   background-image: url(../images/logo_white.svg);
-  position: absolute;
   top: 0;
   left: 0;
 }
